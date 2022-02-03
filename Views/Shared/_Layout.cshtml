@@ -1,0 +1,312 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - College_Portal</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+
+                    <img src="~/images/Logo.png" style="height:74px; width:150px; transform:translate(-30px,-5px);" />
+
+                </a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SRF University</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+
+
+                        <button class="btn btn-secondary" onMouseOver="this.style.backgroundColor='#9AD3D7'" asp-controller="Home" asp-action="Index" onMouseOut="this.style.backgroundColor='#fff'" style="border:none; color:black; background-color:#fff;">
+                            Home
+                        </button>
+
+
+                        <li>
+                            <div class="row">
+                                <div class="dropdown col-sm-6 ">
+                                    <button class="btn btn-secondary  " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onMouseOver="this.style.backgroundColor='#9AD3D7'" onMouseOut="this.style.backgroundColor='#fff'" style="border:none; color:black; background-color:#fff;">
+                                        Academics
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-light" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" asp-controller="Home" asp-action="Academics">Faculty</a>
+                                        <a class="dropdown-item">Syllabus</a>
+                                        <a class="dropdown-item">TimeTable</a>
+                                        <a class="dropdown-item">Results</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+
+
+
+                        @*-------------------*@
+                        <li>
+                            <div class="row">
+                                <div class="dropdown col-sm-6 ">
+                                    <button class="btn btn-secondary  " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onMouseOver="this.style.backgroundColor='#9AD3D7'" onMouseOut="this.style.backgroundColor='#fff'" style="border:none; color:black; background-color:#fff;">
+                                        Department
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-light" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" asp-controller="Home" asp-action="CSE">CSE</a>
+                                        <a class="dropdown-item">ECE</a>
+                                        <a class="dropdown-item">EEE</a>
+                                        <a class="dropdown-item">MECH</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        @*------------------*@
+
+
+                        <li>
+                            <div class="row">
+                                <div class="dropdown col-sm-6 ">
+                                    <button class="btn btn-secondary  " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onMouseOver="this.style.backgroundColor='#9AD3D7'" onMouseOut="this.style.backgroundColor='#fff'" style="border:none; color:black; background-color:#fff;">
+                                        Admissions
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-light" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" asp-controller="Home" asp-action="Engineering">Engineering</a>
+                                        <a class="dropdown-item">Law</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Contact us</a>
+                        </li>
+
+                        <button class="btn btn-success ml-5">Login</button>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class=" text-center text-white " style="background-color:#89bec2; height:100% ">
+        <!-- Grid container -->
+        <div class="container p-4" style="background-color:#89bec2;">
+            <!-- Section: Social media -->
+            <section class="mb-4" style="padding-left:40px;">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                    <i class="fa fa-facebook"></i>
+                </a>
+
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                    <i class="fa fa-twitter"></i>
+                </a>
+
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                    <i class="fa fa-google"></i>
+                </a>
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                    <i class="fa fa-instagram"></i>
+                </a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                    <i class="fa fa-github"></i>
+                </a>
+            </section>
+            <!-- Section: Social media -->
+            <!-- Section: Form -->
+            <section class="">
+                <form action="">
+                    <!--Grid row-->
+                    <div class="row d-flex justify-content-center">
+                        <!--Grid column-->
+                        <div class="col-auto">
+                            <p class="pt-2" style="padding-right:0px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16" style="padding-right:40px; width:72px;">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z" />
+                                </svg>
+                                <strong>Sign up for our newsletter</strong>
+                            </p>
+                        </div>
+                        <!--Grid column-->
+                        <!--Grid column-->
+                        <div class="col-md-5 col-12">
+                            <!-- Email input -->
+                            <div class="form-outline form-white mb-4">
+                                <input type="email" id="form5Example2" class="form-control" />
+                                <label class="form-label" for="form5Example2"></label>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+                        <!--Grid column-->
+                        <div class="col-auto">
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-outline-light mb-4">
+                                Subscribe
+                            </button>
+                        </div>
+                        <!--Grid column-->
+                        <p>
+                            <br />
+                        </p>
+                    </div>
+                    <!--Grid row-->
+                </form>
+            </section>
+            <!-- Section: Form -->
+            <!-- Section: Text -->
+            <section class="mb-4">
+                <p>
+                    Best Wishes To You On This Happy Moment Of Your Life.
+                </p>
+            </section>
+            <!-- Section: Text -->
+            <!-- Section: Links -->
+            <section class="">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-md-3">
+
+
+                        <ul class="list-unstyled mb-0" style="text-align:left; align-items:center;">
+                            <li>
+                                <a href="#!" class="text-white">Home</a>
+                            </li>
+                            <li>
+                                <br />
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Celebratons</a>
+                            </li>
+                            <li>
+                                <br />
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Festivals</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-md-3" style="text-align:left; align-items:center;">
+
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white">About us</a>
+                            </li>
+                            <li>
+                                <br />
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Privacy</a>
+                            </li>
+                            <li>
+                                <br />
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-md-3" style="text-align:left; align-items:center;">
+
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white">Login</a>
+                            </li>
+                            <li>
+                                <br />
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Terms & Conditions</a>
+                            </li>
+                            <li>
+                                <br />
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Support</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3" style="text-align:left; align-items:center;">
+
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white">FAQ</a>
+                            </li>
+                            <li>
+                                <br />
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Unsubscribe</a>
+                            </li>
+                            <li>
+                                <br />
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+        </div>
+        <!-- Grid container -->
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: #89bec2;">
+            © 2022 Copyright:
+            <p>Designed And Developed By POD-D</p>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
