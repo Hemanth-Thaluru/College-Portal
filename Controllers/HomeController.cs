@@ -35,7 +35,7 @@ namespace College_Portal.Controllers
         {
             return View();
         }
-
+        
         public IActionResult Engineering()
         {
             return View();
