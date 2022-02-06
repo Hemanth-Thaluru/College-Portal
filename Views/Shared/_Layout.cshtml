@@ -20,7 +20,7 @@
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
 
-                    <img src="~/images/Logo.png" style="height:74px; width:150px; transform:translate(-30px,-5px);" />
+                    <img src="~/images/Logo.png" style="height:74px; width:150px; transform:translate(-5px,-5px);" />
 
                 </a>
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SRF University</a>
@@ -44,10 +44,10 @@
                                         Academics
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-light" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" asp-controller="Home" asp-action="Academics">Faculty</a>
-                                        <a class="dropdown-item">Syllabus</a>
-                                        <a class="dropdown-item">TimeTable</a>
-                                        <a class="dropdown-item">Results</a>
+                                        <a class="dropdown-item" asp-controller="Academics" asp-action="Faculty">Faculty</a>
+                                        <a class="dropdown-item" asp-controller="Academics" asp-action="Syllabus">Syllabus</a>
+                                        <a class="dropdown-item"asp-controller="Academics" asp-action="Timetable">TimeTable</a>
+                                        <a class="dropdown-item"asp-controller="Academics" asp-action="Results">Results</a>
 
                                     </div>
                                 </div>
