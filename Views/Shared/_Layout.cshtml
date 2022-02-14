@@ -6,114 +6,119 @@
     <title>@ViewData["Title"] - College_Portal</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+
+    @*----start here---*@
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Multi Bootstrap Template - Index</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="~/images/assets/img/SRF.png" rel="icon">
+    <link href="~/images/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    
+    <!-- Vendor CSS Files -->
+    <link href="~/images/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="~/images/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="~/images/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/images/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/images/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/images/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/images/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="~/images/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="~/images/assets/css/style.css" rel="stylesheet">
+
+    @*---end here----*@
+
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center justify-content-between">
 
-                    <img src="~/images/Logo.png" style="height:74px; width:150px; transform:translate(-5px,-5px);" />
+            <a><img src="~/images/SRF2.jpg" style="height:50px" /></a>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-                </a>
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SRF University</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" asp-controller="Home" asp-action="Index">Home</a></li>
 
+                    <li class="dropdown">
+                        <a ><span>Academics</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a asp-controller="Academics" asp-action="Faculty">Faculty</a></li>
+                            <li><a asp-controller="Academics" asp-action="Syllabus">Syllabus</a></li>
+                            <li><a asp-controller="Academics" asp-action="Timetable">Timetable</a></li>
+                            <li><a asp-controller="Academics" asp-action="Results">Results</a></li>
+                        </ul>
+                    </li>
 
-                        <button class="btn btn-secondary" onMouseOver="this.style.backgroundColor='#9AD3D7'" asp-controller="Home" asp-action="Index" onMouseOut="this.style.backgroundColor='#fff'" style="border:none; color:black; background-color:#fff;">
-                            Home
-                        </button>
+                    <li class="dropdown">
+                        <a ><span>Department</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a asp-controller="Departments" asp-action="CSE">CSE</a></li>
+                            <li><a asp-controller="Departments" asp-action="ECE">ECE</a></li>
+                            <li><a asp-controller="Departments" asp-action="MECH">MECH</a></li>
+                            <li><a asp-controller="Departments" asp-action="CIVIL">CIVIL</a></li>
+                        </ul>
+                    </li>
 
+                    <li class="dropdown">
+                        <a ><span>Facilities</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a asp-controller="Facilities" asp-action="GreenCampus">GreenCampus</a></li>
+                            <li><a asp-controller="Facilities" asp-action="Hostel">Hostel</a></li>
+                            <li><a asp-controller="Facilities" asp-action="Hostel">Library</a></li>
+                            <li><a asp-controller="Facilities" asp-action="Green Campus">Transport</a></li>
+                        </ul>
+                    </li>
 
-                        <li>
-                            <div class="row">
-                                <div class="dropdown col-sm-6 ">
-                                    <button class="btn btn-secondary  " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onMouseOver="this.style.backgroundColor='#9AD3D7'" onMouseOut="this.style.backgroundColor='#fff'" style="border:none; color:black; background-color:#fff;">
-                                        Academics
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-light" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" asp-controller="Academics" asp-action="Faculty">Faculty</a>
-                                        <a class="dropdown-item" asp-controller="Academics" asp-action="Syllabus">Syllabus</a>
-                                        <a class="dropdown-item"asp-controller="Academics" asp-action="Timetable">TimeTable</a>
-                                        <a class="dropdown-item"asp-controller="Academics" asp-action="Results">Results</a>
+                    <li class="dropdown">
+                        <a ><span>Admissions</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a asp-controller="Home" asp-action="Engineering">Engineering</a></li>
+                            <li><a asp-controller="Home" asp-action="Law">Law</a></li>
 
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+                        </ul>
+                    </li>
 
+                    <li><a class="nav-link scrollto" asp-controller="ContactUs" asp-action="Contact">ContactUs</a></li>
+                    <li><a class="getstarted scrollto " asp-controller="Home" asp-action="Login">Login</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
 
+        </div>
+    </header><!-- End Header -->
+    <div style="height:100px">
 
+    </div>
 
-                        @*-------------------*@
-                        <li>
-                            <div class="row">
-                                <div class="dropdown col-sm-6 ">
-                                    <button class="btn btn-secondary  " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onMouseOver="this.style.backgroundColor='#9AD3D7'" onMouseOut="this.style.backgroundColor='#fff'" style="border:none; color:black; background-color:#fff;">
-                                        Department
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-light" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" asp-controller="Home" asp-action="CSE">CSE</a>
-                                        <a class="dropdown-item">ECE</a>
-                                        <a class="dropdown-item">EEE</a>
-                                        <a class="dropdown-item">MECH</a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        @*------------------*@
-
-
-                        <li>
-                            <div class="row">
-                                <div class="dropdown col-sm-6 ">
-                                    <button class="btn btn-secondary  " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onMouseOver="this.style.backgroundColor='#9AD3D7'" onMouseOut="this.style.backgroundColor='#fff'" style="border:none; color:black; background-color:#fff;">
-                                        Admissions
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-light" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" asp-controller="Home" asp-action="Engineering">Engineering</a>
-                                        <a class="dropdown-item">Law</a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Contact us</a>
-                        </li>
-
-                        <button class="btn btn-success ml-5">Login</button>
-
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class=" text-center text-white " style="background-color:#89bec2; height:100% ">
+    <footer class=" text-center text-white " style="background-color: #ed502e; height: 100% ">
         <!-- Grid container -->
-        <div class="container p-4" style="background-color:#89bec2;">
+        <div class="container p-4" style="background-color:#ed502e;">
             <!-- Section: Social media -->
             <section class="mb-4" style="padding-left:40px;">
                 <!-- Facebook -->
@@ -298,7 +303,7 @@
         </div>
         <!-- Grid container -->
         <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: #89bec2;">
+        <div class="text-center p-3" style="background-color: #ed502e;">
             © 2022 Copyright:
             <p>Designed And Developed By POD-D</p>
         </div>
@@ -307,6 +312,19 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script src="~/images/assets/vendor/purecounter/purecounter.js"></script>
+    <script src="~/images/assets/vendor/aos/aos.js"></script>
+    <script src="~/images/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/images/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="~/images/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/images/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="~/images/assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
