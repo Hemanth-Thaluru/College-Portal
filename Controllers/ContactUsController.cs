@@ -21,10 +21,10 @@ namespace College_Portal.Controllers
         {
             var message = new MimeMessage();
             var message1 = new MimeMessage();
-            message.From.Add(new MailboxAddress("SRF University", "hemanththaluru@gmail.com"));
-            message1.From.Add(new MailboxAddress("SRF University", "hemanththaluru@gmail.com"));
+            message.From.Add(new MailboxAddress("SRF University", "@gmail.com"));
+            message1.From.Add(new MailboxAddress("SRF University", "@gmail.com"));
             message.To.Add(new MailboxAddress("receiptent", model.mailId));
-            message1.To.Add(new MailboxAddress("receiptent", "hemanththaluru@gmail.com"));
+            message1.To.Add(new MailboxAddress("receiptent", ""));
      
             message.Subject = "Thanks For writing to SRF University";
             message1.Subject = $" {model.Name} contacted SRF University";
@@ -41,7 +41,7 @@ namespace College_Portal.Controllers
             using (var client = new SmtpClient())
             {
                 client.Connect("smtp.gmail.com", 587, false);
-                client.Authenticate("hemanththaluru@gmail.com", "Hemanth@123");
+                client.Authenticate("", "");
                 client.Send(message);
                 client.Disconnect(true);
             }
@@ -49,7 +49,7 @@ namespace College_Portal.Controllers
             using (var client = new SmtpClient())
             {
                 client.Connect("smtp.gmail.com", 587, false);
-                client.Authenticate("hemanththaluru@gmail.com", "Hemanth@123");
+                client.Authenticate("@gmail.com", "");
                 client.Send(message1);
                 client.Disconnect(true);
             }
